@@ -1,0 +1,9 @@
+LIBRARY CALC 
+EXPORTS
+add1 @1
+sub1 @2
+mul1 @3
+div1 @4
+xsqrt @5
+modxy @6
+xty @7

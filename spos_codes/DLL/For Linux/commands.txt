@@ -1,0 +1,12 @@
+javac TestJNI.java
+
+javah -jni TestJNI
+
+touch TestJNI.c
+
+whereis jvm
+
+gcc -I /usr/lib/jvm/java-8-openjdk-amd64/include -I /usr/lib/jvm/java-8-openjdk-amd64/include/linux -o libcal.so -shared TestJNI.c
+
+
+java -Djava.library.path=. TestJNI

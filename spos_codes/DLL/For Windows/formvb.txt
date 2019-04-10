@@ -1,0 +1,55 @@
+Private Declare Function add1 Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double, ByVal y As Double) As Double
+Private Declare Function sub1 Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double, ByVal y As Double) As Double
+Private Declare Function mul1 Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double, ByVal y As Double) As Double
+Private Declare Function div1 Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double, ByVal y As Double) As Double
+Private Declare Function modxy Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double, ByVal y As Double) As Double
+Private Declare Function xty Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double, ByVal y As Double) As Double
+Private Declare Function xsqrt Lib "D:\dll1\Debug\dll1.dll" (ByVal x As Double) As Double
+Private Sub Command1_Click()
+Text3.Text = add1(Val(Text1.Text), Val(Text2.Text))
+
+End Sub
+
+Private Sub Command10_Click()
+Text3.Text = xsqrt(Val(Text1.Text))
+End Sub
+
+Private Sub Command11_Click()
+Text3.Text = xty(Val(Text1.Text), Val(Text2.Text))
+End Sub
+
+Private Sub Command2_Click()
+Text3.Text = sub1(Val(Text1.Text), Val(Text2.Text))
+End Sub
+
+Private Sub Command3_Click()
+Text3.Text = mul1(Val(Text1.Text), Val(Text2.Text))
+End Sub
+
+Private Sub Command4_Click()
+Text3.Text = div1(Val(Text1.Text), Val(Text2.Text))
+End Sub
+
+Private Sub Command5_Click()
+Text3.Text = Log(Val(Text1.Text))
+End Sub
+
+Private Sub Command6_Click()
+Text3.Text = Sin(Val(Text1.Text))
+End Sub
+
+Private Sub Command7_Click()
+Text3.Text = Cos(Val(Text1.Text))
+End Sub
+
+Private Sub Command8_Click()
+Text3.Text = Tan(Val(Text1.Text))
+End Sub
+
+Private Sub Command9_Click()
+Text3.Text = modxy(Val(Text1.Text), Val(Text2.Text))
+End Sub
+
+Private Sub Form_Load()
+
+End Sub

@@ -1,0 +1,65 @@
+// dll1.cpp : Defines the entry point for the DLL application.
+//
+
+#include "stdafx.h"
+#include<math.h>
+#include<iostream.h>
+BOOL APIENTRY DllMain( HANDLE hModule, 
+                       DWORD  ul_reason_for_call, 
+                       LPVOID lpReserved
+					 )
+{
+    return TRUE;
+}
+
+double _stdcall add1(double x, double y)
+{
+return (x+y);
+}
+
+double _stdcall sub1(double x, double y)
+{
+return (x-y);
+}
+
+double _stdcall mul1(double x, double y)
+{
+return (x*y);
+}
+
+double _stdcall div1(double x, double y)
+{try
+    {
+        if(y==0)
+        {
+            throw(y);
+        }
+        else
+            return (x/y);
+    }
+    catch(int a)
+    {
+        cout<<"\nException occurs:Divide By Zero Error.\n";
+    }
+
+}
+
+double _stdcall modxy(double x, double y)
+{
+return (fmod(x,y));
+}
+
+double _stdcall xty(double x, double y)
+{
+return (pow(x,y));
+}
+
+double _stdcall xsqrt(double x)
+{
+return (sqrt(x));
+}
+
+
+
+
+

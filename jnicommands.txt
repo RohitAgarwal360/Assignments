@@ -1,0 +1,3 @@
+javac -h . ArithJNI.java
+gcc -fPIC -I"$( type -p javac|xargs readlink -f|xargs dirname|xargs dirname)/include" -I"$( type -p javac|xargs readlink -f|xargs dirname|xargs dirname)/include/linux" -shared -o libarith.so arithJNI.c
+java -Djava.library.path=. ArithJNI
